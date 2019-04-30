@@ -1,0 +1,11 @@
+.container{
+  margin: 2em;
+}
+.example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+}
+
+mat-accordion{
+  margin: 2em;
+}

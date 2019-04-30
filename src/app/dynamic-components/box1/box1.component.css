@@ -1,0 +1,18 @@
+.example-card {
+  max-width: 400px;
+  display: inline-block;
+  margin: 0 2em 2em 0;
+  background: #c5cae9;
+}
+.example-form {
+  width: 145px;
+}
+.example-full-width {
+  width: 100%;
+}
+mat-card-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

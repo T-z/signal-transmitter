@@ -1,0 +1,129 @@
+.example-container {
+  border: 1px solid #555;
+  height: 100vh;
+}
+
+mat-drawer-content {
+  padding: 12px;
+  align-items: flex-start;
+}
+
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+
+.example-card {
+  max-width: 400px;
+  display: inline-block;
+  margin: 0 2em 2em 0;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.example-header-image-1{
+  background-image: url('https://www.storkimm.com/img/Used_machines/used_machines_2.jpg');
+  background-size: cover;
+}
+.example-header-image-2 {
+  background-image: url('https://5.imimg.com/data5/HD/FA/MY-2696591/paver-block-making-machine-500x500.jpg');
+  background-size: cover;
+}
+
+.example-header-image-3{
+  background-image: url('https://www.harborfreight.com/media/catalog/product/i/m/image_11249.jpg');
+  background-size: cover;
+}
+
+.example-form {
+  width: 145px;
+}
+
+.example-full-width {
+  width: 100%;
+}
+.isActiv{
+  background-color: aquamarine;
+}
+.isNotActiv{
+  //background-color: gainsboro ;
+}
+
+.statusOn::after {
+  content: "On working \2660";
+}
+.statusOff::after {
+  content: "OFF \2297";
+}
+
+.sidenavIcon:hover{
+  cursor: pointer;
+}
+
+.box {
+  display: inline-block;
+  border: 1px solid black;
+  height: 2em;
+  width: 2em;
+  margin-right: 1em;
+}
+.circle {
+  display: inline-block;
+  border: 1px solid black;
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  margin-right: 1em;
+}
+
+.triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 1em solid transparent;
+  border-right: 1em solid transparent;
+  border-bottom:2em solid red;
+  margin-right: 1em;
+}
+
+#triangle-down {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 100px solid red;
+}
+
+
+#triangle-left {
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-right: 100px solid red;
+  border-bottom: 50px solid transparent;
+}
+
+#triangle-right {
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-left: 100px solid red;
+  border-bottom: 50px solid transparent;
+}
+
+
+mat-drawer{
+  width: 35%;
+}
+
+mat-card-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

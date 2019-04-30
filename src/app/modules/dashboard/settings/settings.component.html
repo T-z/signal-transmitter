@@ -1,0 +1,112 @@
+<div class="container">
+
+  <div class="example-button-row">
+    <button mat-raised-button color="primary" (click)="switchOnAll()">start All
+      <mat-icon>power_settings_new</mat-icon>
+    </button>
+    <button mat-raised-button color="warn" (click)="switchOffAll()">stop All
+      <mat-icon>power_settings</mat-icon>
+    </button>
+  </div>
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Motor 1
+        </mat-panel-title>
+        <mat-panel-description>
+          <mat-icon>build</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-form-field>
+        <input matInput placeholder="rotability"   (change)="updateRotability(1,$event)">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="description" (change)="updateDescription(1,$event)">
+      </mat-form-field>
+
+      <mat-action-row>
+        <button mat-button color="primary" (click)="switchOnMotor(1)">start motor<mat-icon>power_settings_new</mat-icon>
+        </button>
+        <button mat-button  color="warn" (click)="switchOffMotor(1)">stop motor<mat-icon>cancel</mat-icon></button>
+      </mat-action-row>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Motor 2
+        </mat-panel-title>
+        <mat-panel-description>
+          <mat-icon>build</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-form-field>
+        <input matInput placeholder="rotability" (change)="updateRotability(2,$event)">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="description" (change)="updateDescription(2,$event)">
+      </mat-form-field>
+
+      <mat-action-row>
+        <button mat-button color="primary" (click)="switchOnMotor(2)">start motor<mat-icon>power_settings_new</mat-icon>
+        </button>
+        <button mat-button  color="warn" (click)="switchOffMotor(2)">stop motor<mat-icon>cancel</mat-icon></button>
+      </mat-action-row>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Motor 3
+        </mat-panel-title>
+        <mat-panel-description>
+          <mat-icon>build</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-form-field>
+        <input matInput placeholder="rotability" (change)="updateRotability(3,$event)">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="description" (change)="updateDescription(3,$event)">
+      </mat-form-field>
+
+      <mat-action-row>
+        <button mat-button color="primary" (click)="switchOnMotor(3)">start motor<mat-icon>power_settings_new</mat-icon>
+        </button>
+        <button mat-button  color="warn" (click)="switchOffMotor(3)">stop motor<mat-icon>cancel</mat-icon></button>
+      </mat-action-row>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Motor 4
+        </mat-panel-title>
+        <mat-panel-description>
+          <mat-icon>build</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-form-field>
+        <input matInput placeholder="rotability" (change)="updateRotability(4,$event)">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="description" (change)="updateDescription(4,$event)">
+      </mat-form-field>
+
+      <mat-action-row>
+        <button mat-button color="primary" (click)="switchOnMotor(4)">start motor<mat-icon>power_settings_new</mat-icon>
+        </button>
+        <button mat-button  color="warn" (click)="switchOffMotor(4)">stop motor<mat-icon>cancel</mat-icon></button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <mat-divider></mat-divider>
+  <button mat-raised-button color="primary" *ngIf="!autoSync" (click)="autoSyncAll()" style="margin:2em;">OPC_UA synchronisation
+    <mat-icon>sync</mat-icon>
+  </button>
+  <button mat-raised-button color="warn" *ngIf="autoSync" (click)="stopAutoSyncAll()" style="margin:2em;">STOP OPC_UA synchronisation
+    <mat-icon>sync</mat-icon>
+  </button>
+</div>

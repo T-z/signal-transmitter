@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "activity": true,
+        "rotability": 0,
+        "description": ""
+    },
+    {
+        "id": 2,
+        "activity": true,
+        "rotability": 0,
+        "description": "lorem 1"
+    },
+    {
+        "id": 3,
+        "activity": true,
+        "rotability": 0,
+        "description": "lorem 2"
+    },
+    {
+        "id": 4,
+        "activity": true,
+        "rotability": 0,
+        "description": "lorem 3"
+    }
+]

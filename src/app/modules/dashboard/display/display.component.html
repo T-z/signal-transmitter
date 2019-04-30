@@ -1,0 +1,114 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Signal-Transmiter</span>
+    <span class="example-spacer"></span>
+    <mat-icon aria-label="Side nav toggle icon" aria-hidden="false" class="example-icon sidenavIcon"  (click)="drawer.toggle()">settings</mat-icon>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-drawer-container class="example-container" >
+  <mat-drawer #drawer [mode]="mode.value">
+    <tmt-settings></tmt-settings>
+  </mat-drawer>
+  <mat-drawer-content>
+
+   
+
+    <mat-card class="example-card" [ngClass]="{'isActiv':itemObj[0].activity,'isNotActiv':!itemObj[0].activity}">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image-1"></div>
+        <mat-card-title>Motor 1</mat-card-title>
+        <mat-card-subtitle [ngClass]="{'statusOn':itemObj[0].activity,'statusOff':!itemObj[0].activity}"></mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <form class="example-form">
+          <mat-progress-bar mode="indeterminate" *ngIf="itemObj[0].activity"></mat-progress-bar>
+          <mat-progress-bar mode="determinate" value="10" *ngIf="!itemObj[0].activity"></mat-progress-bar>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="rotability" value="{{itemObj[0].rotability}}">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <textarea matInput placeholder="description">{{itemObj[0].description}}</textarea>
+          </mat-form-field>
+        </form>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="example-card" [ngClass]="{'isActiv':itemObj[1].activity,'isNotActiv':!itemObj[1].activity}">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image-2"></div>
+      <mat-card-title>Motor 2</mat-card-title>
+      <mat-card-subtitle [ngClass]="{'statusOn':itemObj[1].activity,'statusOff':!itemObj[1].activity}"></mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <form class="example-form">
+        <mat-progress-bar mode="indeterminate" *ngIf="itemObj[1].activity"></mat-progress-bar>
+        <mat-progress-bar mode="determinate" value="10" *ngIf="!itemObj[1].activity"></mat-progress-bar>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="rotability" value="{{itemObj[1].rotability}}">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <textarea matInput placeholder="description">{{itemObj[1].description}}</textarea>
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    </mat-card>
+    <mat-card class="example-card" [ngClass]="{'isActiv':itemObj[2].activity,'isNotActiv':!itemObj[2].activity}">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Motor 3</mat-card-title>
+        <mat-card-subtitle [ngClass]="{'statusOn':itemObj[2].activity,'statusOff':!itemObj[2].activity}"></mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <form class="example-form">
+          <mat-progress-bar mode="indeterminate" *ngIf="itemObj[2].activity"></mat-progress-bar>
+          <mat-progress-bar mode="determinate" value="10" *ngIf="!itemObj[2].activity"></mat-progress-bar>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="rotability" value="{{itemObj[2].rotability}}">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <textarea matInput placeholder="description">{{itemObj[2].description}}</textarea>
+          </mat-form-field>
+        </form>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="example-card" [ngClass]="{'isActiv':itemObj[3].activity,'isNotActiv':!itemObj[3].activity}">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image-3"></div>
+        <mat-card-title>Motor 4</mat-card-title>
+        <mat-card-subtitle [ngClass]="{'statusOn':itemObj[3].activity,'statusOff':!itemObj[3].activity}"></mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <form class="example-form">
+          <mat-progress-bar mode="indeterminate" *ngIf="itemObj[3].activity"></mat-progress-bar>
+          <mat-progress-bar mode="determinate" value="10" *ngIf="!itemObj[3].activity"></mat-progress-bar>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="rotability" value="{{itemObj[3].rotability}}">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <textarea matInput placeholder="description">{{itemObj[3].description}}</textarea>
+          </mat-form-field>
+        </form>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-form-field style="display: none">
+      <mat-label>Sidenav mode</mat-label>
+      <mat-select #mode value="side">
+        <mat-option value="side">Side</mat-option>
+        <mat-option value="over">Over</mat-option>
+        <mat-option value="push">Push</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-divider></mat-divider>
+    <button mat-raised-button color="primary" (click)="generateBox()" style="margin:1em">Dynamic Loading&nbsp;<mat-icon>library_add</mat-icon></button>
+    <button mat-raised-button color="primary" (click)="deleteBox()" style="margin:1em">clear Content &nbsp;<mat-icon>library_add</mat-icon></button>
+    <div class="row" id="content">
+      <customer-box1 a="100" b="50" c="25"></customer-box1>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

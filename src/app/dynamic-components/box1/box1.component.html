@@ -1,0 +1,20 @@
+
+<mat-card class="example-card dynamicBox">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image-1"></div>
+    <mat-card-title>Motor {{ a }}</mat-card-title>
+    <mat-card-subtitle>Dynamic Load</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="example-form">
+      <mat-progress-bar mode="determinate" value="{{ b }}" ></mat-progress-bar>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="rotability" value="{{c}}">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="description"></textarea>
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+</mat-card>
